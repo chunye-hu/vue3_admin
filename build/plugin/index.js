@@ -11,12 +11,7 @@ import { configHtmlPlugin } from './html'
 import { unocss } from './unocss'
 
 export function createVitePlugins(viteEnv, isBuild) {
-  const plugins = [
-    vue(),
-    VueSetupExtend(),
-    configHtmlPlugin(viteEnv, isBuild),
-    unocss()
-  ]
+  const plugins = [vue(), VueSetupExtend(), configHtmlPlugin(viteEnv, isBuild), unocss()]
   if (isBuild) {
     plugins.push(
       visualizer({
